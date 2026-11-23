@@ -17,7 +17,7 @@ function run(p: Uint8Array, q: Uint8Array) {
     if (t === 1e6) return e(10);
     if (x < 0 || x >= n) return e(9);
     const a = p[x];
-    if (!(a <= 7 || (a >= 0x10 && a <= 0x22) || (a >= 0x30 && a <= 0x34) || (a >= 0x40 && a <= 0x41) || (a >= 0x50 && a <= 0x53))) return e(5);
+    if (!(a <= 7 || (a >= 0x10 && a <= 0x1e) || (a >= 0x20 && a <= 0x22) || (a >= 0x30 && a <= 0x34) || (a >= 0x40 && a <= 0x41) || (a >= 0x50 && a <= 0x53))) return e(5);
     const m = a === 1 ? 1 : a === 2 ? 4 : a >= 0x30 && a <= 0x33 ? 2 : 0;
     if (x + m >= n) return e(9);
     t++;
